@@ -1,24 +1,18 @@
 ### Install
 Go to the source directory and open terminal, please run this command.<br>
 > npm install
-### Compile
-> npx hardhat compile
+
 ### Config
-Rename .env.example to .env and open it, then fill the mainnet/rinkeby url and account's private key.<br>
-> MAINNET_END_POINT=Your mainnet infra url<br>
-> MAINNET_PRIVATE_KEY=Your mainnet account's private key for deployment<br>
-> RINKEBY_END_POINT=Your rinkeby infra url<br>
-> RINKEBY_PRIVATE_KEY=Your rinkeby account's private key for deployment<br>
-> ETHERSCAN_API_KEY=You etherscan api<br>
+Rename .env.example to .env and open it, then fill the Huygens\_dev/huygens url and account's private key.<br> 
+> HUYGENS\_DEV\_URL=http://18.182.45.18:8765<br>
+> HUYGENS\_DEV\_PRIVATE\_KEY=Your Huygens_dev account's private key for deployment<br>
+> HUYGENS\_URL=http://13.212.177.203:8765<br>
+> HUYGENS\_PRIVATE\_KEY=Your Huygens account's private key for deployment<br>
 
-### Test
-> npx hardhat test test/test.js
+### Deploy and test the contract on Huygens_Dev
+> npx hardhat run scripts/contract.js --network huygens_dev<br>
 
-### Deploy on Mainnet
-> npx hardhat run scripts/deploy.js --network mainnet<br>
+### Deploy and test the contract on Huygens
+> npx hardhat run scripts/contract.js --network huygens<br>
 
-### Deploy on Rinkeby
-> npx hardhat run scripts/deploy_test.js --network rinkeby<br>
-
-Once deployed, you can see the Bridge contract's address on terminal.<br>
-**Save the Bridge contract's address and use it.**
+Once deployed, you can see the Contract's address and it's balance on terminal.<br>
